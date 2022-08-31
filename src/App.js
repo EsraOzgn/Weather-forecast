@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { data } from 'autoprefixer'
+import axios from 'axios'
+import {useState,useEffect} from 'react'
+
+import Home from './components/Home'
+
+export const API_KEY = "f4878c9f8d449c80b5225f23a451217f"
+
 
 function App() {
+
+  const [weatherData,setWeatherData] = useState([])
+
+  const weatherFecth = async() => {
+      await axios(`https://api.openweathermap.org/data/2.5/weather?q=${"adana"}&appid=${API_KEY}`).then(res => setWeatherData(res.data))
+  }
+
+  console.log(weatherData)
+
+  useEffect(() => {
+    weatherFecth()  
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     <div>
+
+
+       
+       {/* <div>{weatherData.weather.map((item) =>(
+        <div>{item.description}</div>
+       ))}</div> */}
+
+          <Home />
+          
+
+        
+
+     </div>
+  )
 }
 
-export default App;
+export default App
