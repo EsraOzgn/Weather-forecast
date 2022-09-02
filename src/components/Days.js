@@ -20,46 +20,46 @@ function Days() {
 
         <div className='flex flex-row justify-between pt-10'>
 
-       <div className='bg-orange-900  rounded-lg w-[190px] h-[370px] flex flex-col'>
-          <div>{cityDetails?.forecast.forecastday[0].date}</div>   
-          <div>{cityDetails?.forecast.forecastday[0].day.avgtemp_c}</div> 
-          <div>{cityDetails?.forecast.forecastday[0].day.condition.text}</div>
-          <div><img src={cityDetails?.forecast.forecastday[0].day.condition.icon}/> </div>
-          <div>rüzgar: {cityDetails?.forecast.forecastday[0].day.maxwind_kph}   </div>
+       <div className='bg-gray-600  rounded-lg w-[190px] h-[370px] flex flex-col shadow-lg shadow-black'>
+          <div className='flex justify-center pt-5 font-extrabold '>{cityDetails?.forecast.forecastday[0].date}</div>   
+          <div className='flex justify-center pt-5 font-extrabold '>{cityDetails?.forecast.forecastday[0].day.avgtemp_c}</div> 
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[0].day.condition.text}</div>
+          <div className='flex justify-center pt-9 '><img className='shadow-lg shadow-black rounded-full border' src={cityDetails?.forecast.forecastday[0].day.condition.icon}/> </div>
+          <div className='flex justify-center pt-5 font-extrabold'>rüzgar: {cityDetails?.forecast.forecastday[0].day.maxwind_kph}   </div>
 
 
 
          
        </div>
 
-       <div className='bg-orange-800  rounded-lg w-[190px] h-[370px]'>
+       <div className='bg-gray-600  rounded-lg w-[190px] h-[370px] shadow-lg shadow-black'>
 
-       <div>{cityDetails?.forecast.forecastday[1].date}</div>   
-          <div>{cityDetails?.forecast.forecastday[1].day.avgtemp_c}</div> 
-          <div>{cityDetails?.forecast.forecastday[1].day.condition.text}</div>
-          <div><img src={cityDetails?.forecast.forecastday[1].day.condition.icon}/> </div>
-          <div>rüzgar: {cityDetails?.forecast.forecastday[1].day.maxwind_kph}   </div>
-
-        
-       </div>
-
-       <div className='bg-orange-700  rounded-lg w-[190px] h-[370px]'>
-          <div>{cityDetails?.forecast.forecastday[2].date}</div>   
-              <div>{cityDetails?.forecast.forecastday[2].day.avgtemp_c}</div> 
-              <div>{cityDetails?.forecast.forecastday[2].day.condition.text}</div>
-              <div><img src={cityDetails?.forecast.forecastday[2].day.condition.icon}/> </div>
-              <div>rüzgar: {cityDetails?.forecast.forecastday[2].day.maxwind_kph}   </div>
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[1].date}</div>   
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[1].day.avgtemp_c}</div> 
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[1].day.condition.text}</div>
+          <div className='flex justify-center pt-9'><img className='shadow-lg shadow-black rounded-full border border-gray-800' src={cityDetails?.forecast.forecastday[1].day.condition.icon}/> </div>
+          <div className='flex justify-center pt-5 font-extrabold'>rüzgar: {cityDetails?.forecast.forecastday[1].day.maxwind_kph}   </div>
 
         
        </div>
 
-       <div className='bg-orange-600  rounded-lg w-[190px] h-[370px]'>
+       <div className='bg-gray-600  rounded-lg w-[190px] h-[370px] shadow-lg shadow-black'>
+              <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[2].date}</div>   
+              <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[2].day.avgtemp_c}</div> 
+              <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[2].day.condition.text}</div>
+              <div className='flex justify-center pt-9'><img className='shadow-lg shadow-black rounded-full border' src={cityDetails?.forecast.forecastday[2].day.condition.icon}/> </div>
+              <div className='flex justify-center pt-5 font-extrabold'>rüzgar: {cityDetails?.forecast.forecastday[2].day.maxwind_kph}   </div>
 
-       <div>{cityDetails?.forecast.forecastday[3].date}</div>   
-          <div>{cityDetails?.forecast.forecastday[3].day.avgtemp_c}</div> 
-          <div>{cityDetails?.forecast.forecastday[3].day.condition.text}</div>
-          <div><img src={cityDetails?.forecast.forecastday[3].day.condition.icon}/> </div>
-          <div>rüzgar: {cityDetails?.forecast.forecastday[3].day.maxwind_kph}   </div>
+        
+       </div>
+
+       <div className='bg-gray-600  rounded-lg w-[190px] h-[370px] shadow-lg shadow-black'>
+
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[3].date}</div>   
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[3].day.avgtemp_c}</div> 
+          <div className='flex justify-center pt-5 font-extrabold'>{cityDetails?.forecast.forecastday[3].day.condition.text}</div>
+          <div className='flex justify-center pt-9'><img className='shadow-lg shadow-black rounded-full border' src={cityDetails?.forecast.forecastday[3].day.condition.icon}/> </div>
+          <div className='flex justify-center pt-5 font-extrabold'>rüzgar: {cityDetails?.forecast.forecastday[3].day.maxwind_kph}   </div>
 
         
 

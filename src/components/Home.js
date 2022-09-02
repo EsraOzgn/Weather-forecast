@@ -26,25 +26,22 @@ const Home = () => {
 
 
   return (
-    <div className='w-[100%] h-[1300px] flex flex-col justify-center items-center absolute'>
+    <div className='main  w-[100%] h-[100%] flex flex-col justify-center items-center absolute'>
       <div className='input mb-[50px]'>
-        <input placeholder='şehir gir' value={city} onChange={(e) => setCity(e.target.value)}/>
+        <input className='w-[500px] absolute top-2 border-4 rounded-3xl ring-4 ring-gray-700' placeholder='şehir gir' value={city} onChange={(e) => setCity(e.target.value)}/>
         
-        <div>
-          {citySuggestion.map((item, idx) => (
-            <div onClick={() => handleClick(item)}>{item}</div>
-          ))}
-
-
-        </div>
-
+          <div className='.bg-transparent border z-10 absolute top-8 '>
+            {citySuggestion.map((item, idx) => (
+              <div onClick={() => handleClick(item)}>{item}</div>
+            ))}
+          </div>
       </div>
-        <div className='w-[1500px] h-[750px] rounded-lg items-center   bg-sky-700'>
+
+        <div className='w-[1500px] h-[750px] absolute top-32  rounded-lg  shadow-lg shadow-black .bg-transparent'>
             <div className='flex gap-1 justify-around items-center  h-[100%] w-[100%]'>
                     <Today/>
                     <Days/>
-                </div>
-
+            </div>
         </div>
     </div>  
   )

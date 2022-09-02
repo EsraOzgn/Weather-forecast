@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: rgb(173, 220, 238);
+.main {
+    background-image: url("./image/nature.jpg");
 }

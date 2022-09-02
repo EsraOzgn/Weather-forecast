@@ -63,9 +63,10 @@ function App() {
 
 
        
+      <div>
+        <Home />
+      </div>
 
-
-          <Home />
           
 
         
