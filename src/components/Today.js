@@ -1,70 +1,48 @@
 import React from 'react'
 import {mainContext,useContext} from '../Context'
 import {TbTemperatureCelsius} from 'react-icons/tb'
-import {BsFillCloudHailFill} from 'react-icons/bs'
-
 
 
 function Today() {
-    const {city,setCity,citySuggestion,setCitySuggestion,clicked,setClicked,cityDetails,setCityDetails} = useContext(mainContext)
+    const {  cityData,setCityData, searchValue,setSearchValue} = useContext(mainContext)
 
 
-    console.log(cityDetails)
-
-    
-  
     return (
-      <div className=' flex flex-col  w-[300px] h-[650px]  rounded-3xl  shadow-lg shadow-black bg-gray-300 '>
-  
-         <div className='card-date flex justify-center pt-9 font-extrabold'>
-                  Date: 02.09.2022  
-                </div>
-          
-          <div className='card-title flex justify-center pt-9 font-extrabold'>
-             City : {cityDetails?.location.name}
-          </div>
-  
-  
-          <div className='card-thermometer flex justify-center pt-9 font-extrabold '>
-               Temperature :  {cityDetails?.current.temp_c} <TbTemperatureCelsius/>
-  
-          </div>
-  
-          <div className='card-cloud flex justify-center pt-9'>
-              <BsFillCloudHailFill size={150} color={"gray"}/>
-          </div>
-  
-          <div className='card-details flex justify-evenly pt-20'>
-  
-                  <div className='details-nem flex flex-col justify-center '>
-                      <div className='font-extrabold'>Feelslike</div>
-                      <div className='p-[4px] flex justify-center'> {cityDetails?.current.feelslike_c}</div>
+      <div className=' flex  flex-1content-center w-[50%] h-[60%] rounded-3xl mt-8 shadow-lg shadow-black bg-white bg-opacity-60 '>
+           <div className='flex-1   border-r-4 border-black'>
+                    <div className='card-title  justify-start mt-14 ml-16  font-extrabold text-3xl'>
+                      {cityData?.name}
+                    </div>
+
+                    <div className='flex mt-20 ml-44 text-xl font-extrabold'>
+                      {cityData?.main.temp}  <TbTemperatureCelsius/>
+                    </div>
+
+                    <div className='ml-10'>
+                      <img className='w-[140px] rounded-full shadow-lg shadow-black border border-white '  src={require('../image/sun.gif')} />
+                    </div>
+            </div>
+
+               <div className=' flex flex-col flex-1 '>
+                    <div className='mt-5 ml-56 font-extrabold'>
+                      02.09.2022  
+                    </div>
+
+                    <div className='font-extrabold text-lg mt-20 ml-8 justify-center'>Feelslike :  <span className='ml-4 font-light'>{cityData?.main.feels_like} </span></div>
+                    
+
+                    <div className='details-nem flex flex-col ml-8 mt-3 mb-3 justify-center'>
+                      <div className='font-extrabold text-lg'>Wind : <span className='ml-4 font-light' >{cityData?.wind.speed}</span></div>
+                    </div>
+
+                  <div className='details-nem flex flex-col ml-8  justify-center'>
+                      <div className='font-extrabold text-lg'>humadity : <span className='ml-4 font-light'>{cityData?.main.humidity}</span></div>  
                   </div>
-  
-                  <div className='details-nem flex flex-col  justify-center'>
-                      <div className='font-extrabold'>Wind</div>
-                      <div className='p-[4px] flex justify-center'>{cityDetails?.current.gust_kph}</div>
-                  </div>
-  
-                  <div className='details-nem flex flex-col  justify-center'>
-                      <div className='font-extrabold'>Nem</div>
-                      <div className='p-[4px] flex justify-center'>38</div>
-                  </div>
-  
-  
-          </div> 
-   
-  
-          
-          
-          </div>
+             </div>
+                 
+        </div> 
     )
 
-  
-
-
-
-  
 }
 
 export default Today

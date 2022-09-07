@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 .main {
-    background-image: url("./image/nature.jpg");
+    background-image: url("./image/foggy.jpg");
+        font-family: 'Roboto', sans-serif;
+        ;
 }

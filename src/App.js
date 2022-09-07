@@ -4,72 +4,43 @@ import {useState,useEffect} from 'react'
 import {mainContext} from './Context';
 import Home from './components/Home'
 
-const autoCompleteURL = "https://api.weatherapi.com/v1/search.json?key=9c5155a62a494c12be3170247220109&q="
-const weatherURL = (city) => `https://api.weatherapi.com/v1/forecast.json?key=9c5155a62a494c12be3170247220109&q=${city}&days=5&aqi=no&alerts=no`
 
 
 function App() {
 
-  const [cityDetails,setCityDetails] = useState()
-  const [city,setCity] = useState("")
-  const [clicked,setClicked] = useState(false)
+  const [cityData,setCityData] = useState()
+  const [searchValue,setSearchValue] = useState()
 
-  const [citySuggestion,setCitySuggestion] = useState([])
 
+  const dataFetch = async() => {
+    const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=d9b7738c8a47ebebdfeeb24a7fcc5a8a&units=metric`)
+
+    setCityData(data)
+
+  }
+
+  console.log(cityData)
 
 
   useEffect(() => {
+    
+    dataFetch()
 
-   
-
-      const fetchCitySuggestion = async () => {
-        const resp = await fetch(autoCompleteURL + city)
-        const data = await resp.json()
-        const citySuggestionData = data.map(curData => `${curData.name}, ${curData.region} ,${curData.country}`)
-        setCitySuggestion(citySuggestionData)
-  
-      }
-  
-      if(!clicked && city.length > 2 ) {
-        fetchCitySuggestion()
-  
-      } else {
-        setCitySuggestion([])
-        setClicked(false)
-      }
-      
-
-
-  }, [city])
-
+  }, [searchValue])
 
 
   const Data = {
-    autoCompleteURL,
-    
-    city,
-    setCity,
-    citySuggestion,
-    setCitySuggestion,
-    clicked,setClicked,
-    cityDetails,setCityDetails
+      cityData,setCityData,
+      searchValue,setSearchValue
   }
   
-
-
 
   return (
      <mainContext.Provider value={Data}>
 
-
-       
       <div>
         <Home />
       </div>
-
-          
-
-        
 
      </mainContext.Provider>
   )
