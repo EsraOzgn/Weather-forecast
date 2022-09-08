@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .main {
-    background-image: url("./image/foggy.jpg");
+    background-image: url("../public/icons/foggy.jpg");
         font-family: 'Roboto', sans-serif;
         ;
 }

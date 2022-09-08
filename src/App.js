@@ -19,8 +19,8 @@ function App() {
 
   }
 
-  console.log(cityData)
 
+  console.log(cityData)
 
   useEffect(() => {
     
