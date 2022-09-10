@@ -53,31 +53,31 @@ const fourFetch = async() => {
 
   return (
     <>
-      <div className='  w-[70%] h-[150px]  rounded-lg  absolute bottom-1' >
+      <div className='w-[70%] h-[150px]  rounded-lg  absolute bottom-1' >
         <div className='flex flex-row gap-9 justify-center'>
 
-          <div className=' front backdrop-blur-lg  rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black' >
+          <div className=' front backdrop-blur-0  rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black' >
             <div className='flex justify-center pt-3 font-extrabold '>{oneCountry?.name}</div>   
             <div className='flex justify-center pt-2 font-extrabold '>{oneCountry?.main.temp}°C</div> 
             <div className='flex justify-center  '><img className='w-[100px]' src={`icons/${oneCountry?.weather[0].icon}.svg`}/></div>
           </div>
 
-          <div className='backdrop-blur-lg  rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black'>
+          <div className='backdrop-blur-0 rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black'>
             <div className='flex justify-center pt-3 font-extrabold'>{twoCountry?.name}</div>   
             <div className='flex justify-center pt-2 font-extrabold'>{twoCountry?.main.temp}°C</div> 
-            <div className='flex justify-center '><img className='w-[100px]' src={`icons/${twoCountry?.weather[0].icon}.svg`}/></div> 
+            <div className='flex justify-center'><img className='w-[100px]' src={`icons/${twoCountry?.weather[0].icon}.svg`}/></div> 
           </div>
 
-          <div className='backdrop-blur-lg rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black'>
+          <div className='backdrop-blur-0 rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black'>
             <div className='flex justify-center pt-3 font-extrabold'>{threeCountry?.name}</div>   
             <div className='flex justify-center pt-2 font-extrabold'>{threeCountry?.main.temp}°C</div>
-            <div className='flex justify-center   '><img className='w-[100px]' src={`icons/${threeCountry?.weather[0].icon}.svg`}/></div>  
+            <div className='flex justify-center'><img className='w-[100px]' src={`icons/${threeCountry?.weather[0].icon}.svg`}/></div>  
           </div>
 
-          <div className='backdrop-blur-lg rounded-3xl w-[320px] h-[160px] shadow-lg shadow-black'>
+          <div className='backdrop-blur-0 rounded-3xl w-[320px] h-[160px] shadow-lg shadow-black'>
             <div className='flex justify-center pt-3 font-extrabold'>{fourCountry?.name}</div>   
             <div className='flex justify-center pt-2 font-extrabold'>{fourCountry?.main.temp}°C </div> 
-            <div className='flex justify-center   '><img className='w-[100px]' src={`icons/${fourCountry?.weather[0].icon}.svg`}/></div> 
+            <div className='flex justify-center'><img className='w-[100px]' src={`icons/${fourCountry?.weather[0].icon}.svg`}/></div> 
           </div>
         </div>
       </div>  
