@@ -12,7 +12,7 @@ function Today() {
                       {cityData?.name}
                     </div>
 
-                    <div className='flex mt-20 ml-[55%] text-xl font-extrabold'>
+                    <div className='flex mt-12 ml-[55%] text-xl font-extrabold'>
                       {cityData?.main.temp} <TbTemperatureCelsius/>
                     </div>
 
@@ -21,7 +21,7 @@ function Today() {
                     </div>
 
                      <div> 
-                      <div className='text-lg font-bold mt-14 ml-[75%] rounded-l-full shadow-yellow-600 shadow-lg  bg-yellow-500'>  <span className='ml-[15%] font-light'>{cityData?.weather[0].main} </span></div>
+                      <div className='text-lg font-light mt-4 ml-[75%] rounded-l-full shadow-yellow-600 shadow-lg pl-5  bg-yellow-500 '>{cityData?.weather[0].main}</div>
                     </div> 
             </div>
 

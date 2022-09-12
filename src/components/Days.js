@@ -53,7 +53,7 @@ const fourFetch = async() => {
 
   return (
     <>
-      <div className='w-[70%] h-[150px]  rounded-lg  absolute bottom-1' >
+      <div className='w-[70%] h-[20%]  rounded-lg  absolute bottom-1' >
         <div className='flex flex-row gap-9 justify-center'>
 
           <div className=' front backdrop-blur-0  rounded-3xl w-[320px] h-[160px]  shadow-lg shadow-black' >
